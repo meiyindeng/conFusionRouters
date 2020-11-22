@@ -8,7 +8,7 @@ const port = 3000;
 
 const app = express();
 const dishRouter = require('./routes/dishRouter');
-const promotionRouter = require('./routes/promotionRouter');
+const promoRouter = require('./routes/promoRouter');
 const leaderRouter = require('./routes/leaderRouter');
 
 //this app takes 3 parameters, request, response, and next as the middleware
@@ -28,7 +28,7 @@ app.use(bodyParser.json());
 app.use('/dishes', dishRouter);
 //app.use('/dishes/:dishId', dishRouter);
 
-app.use('/promotions', promotionRouter);
+app.use('/promotions', promoRouter);
 app.use('/leaders', leaderRouter);
 
 app.use((req, res, next) => {
